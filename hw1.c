@@ -3,6 +3,7 @@
 int isEqualarray(int* x, int* y, int n);
 void printResult(int result);
 
+
 int main(void)
 {
     int a[] = {4, 7, 9, 3, 6};
