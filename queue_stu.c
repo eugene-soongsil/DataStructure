@@ -63,7 +63,7 @@ void printQ(struct Queue* p){
     numberOfQ = p->rear > p->front ? (p->rear - p->front) : ((p->rear + MAX ) - p->front);
     int index = p->front + 1;
     for(int i=0; i<numberOfQ; i++){
-        printf("%d, name:%s, department:%s ", p->data[(index+i)%MAX]->id, p->data[(index+i)%MAX]->name, p->data[(index+i)%MAX]->dept);
+        printf("%d, name:%s, department:%s ", p->data[(index+i)%MAX]->id, p->data[(index+i)%MAX]->name, p->data[(index+i)%MAX]->dept); //포인터로 접근하는것만 추가
         printf("\n");
     }
 }

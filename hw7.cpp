@@ -76,6 +76,6 @@ int main(){
     print_Poly(&A);
     print_Poly(&B);
     
-    add_Poly(&C, &A, &B);
+    add_poly(&C, &A, &B);
     print_Poly(&C);
 }

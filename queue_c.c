@@ -54,7 +54,7 @@ int dequeue(struct Queue* p){
 void printQ(struct Queue* p){
     int numberOfQ;
     numberOfQ = p->rear > p->front ? (p->rear - p->front) : ((p->rear + MAX) - p->front); //rear가 0이 되는 경우이기 때문에 MAX를 더해준다.
-    int index = p->front+1; //index의 초기값을 queue data가 처음으로 담긴 곳으로 대입
+    int index = p->front+1; //index의 초기값을 queue data가 처음으로 담긴 곳으로 대입 (%MAX를 왜 안했는지 모르겠는데 해야할듯 -> 어차피 아래에서 MAX연산하는구나)
     for(int i=0; i < numberOfQ; i++)
         printf("%d ", p->data[(index+i)%MAX]);
     printf("\n");

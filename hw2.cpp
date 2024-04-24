@@ -1,5 +1,6 @@
 #include <string>
 #include <stdio.h>
+#include <iostream>
 
 using namespace std;
 class Animal{
@@ -13,12 +14,12 @@ class Animal{
     void eat(){cout<<"EAT???"<<endl;}
     void sleep(){cout<<"I can sleep!"<<endl;}
     void setColor(string clr){color = clr;}
-    string getColor(){retrun color;}
+    string getColor(){return color;}
     void displayInfo(){
         cout<<"I am a"<<type<<endl;
         cout<<"My color is"<<color<<endl;}
 };
-class Dog:public Animal{
+class Dog:public Animal{ //상속
     int age;
     public:
     Dog(int age = 0){this->age = age;}

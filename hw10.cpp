@@ -71,7 +71,7 @@ class Stack{
 int main(){
     Stack s;
 
-    s.push(new Student(2019, "Park", "EE"));
+    s.push(new Student(2019, "Park", "EE")); //new = 만든 동적 메모리의 주소를 반환 (포인터로 받아야함)
     s.push(new Student(2020, "Kim", "EE"));
     s.push(new Student(2021, "Lee", "CS"));
     s.push(new Student(2022, "Choi", "EECS"));

@@ -74,6 +74,6 @@ int main(){
     car[i] -> display();
     for(int i = 0; i < 3; i++)
     car[i] -> operation();
-    //for(int i = 0; i < 3; i++) car[i] -> operation();
+    //for(int i = 0; i < 3; i++) delete Car;
 }
 
