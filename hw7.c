@@ -30,6 +30,13 @@ void add_poly(Poly2* c, Poly2* a, Poly2* b){
             indexc++;
         }
 
+        if (a->T[indexa].exponent < b->T[indexb].exponent) {
+            c->T[indexc].coefficent = b->T[indexb].coefficent;
+            c->T[indexc].exponent = b->T[indexb].exponent;
+            indexb++;
+            indexc++;
+        }
+
         if(a->T[indexa].exponent == b->T[indexb].exponent){
             c->T[indexc].coefficent = a->T[indexa].coefficent + b->T[indexb].coefficent;
             c->T[indexc].exponent = a->T[indexa].exponent;

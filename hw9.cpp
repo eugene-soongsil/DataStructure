@@ -3,8 +3,8 @@
 using namespace std;
 
 class term{
-    int exponent;
     double coefficient;
+    int exponent;
 
     public:
     term(double coeff, int exp){
@@ -28,7 +28,7 @@ class term{
 
 class Poly{
     int numberofterms;
-    term* pTerm[MAX];
+    term* pTerm[MAX]; //배열을 사용하였기때문에 이전처럼 malloc 사용 안해도 된다.
 
     public:
     Poly(){
@@ -43,8 +43,8 @@ class Poly{
     }
     //새로운 term 객체를 만들고 pTerm에 대입(numberofterms가 가리키는 곳은 최상단 빈곳)
     void addTerm(double coeff, int exp){
-        pTerm[numberofterms] = new term(exp, coeff); //new 할당 1!! 포인터로 가르켜 놓기만 할 뿐 term의 구조에 대한 메모리가 할당이 되어있지 않음
-        numberofterms++;
+        pTerm[s+numberofterms] = new term(coeff, exp); //new 할당 1!! 포인터로 가르켜 놓기만 할 뿐 term의 구조에 대한 메모리가 할당이 되어있지 않음
+        numberofterm+;
     }
     //why this??
     void printPoly(){
